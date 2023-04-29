@@ -39,7 +39,6 @@ return {
 	{ -- Adds git releated signs to the gutter, as well as utilities for managing changes
 		'lewis6991/gitsigns.nvim',
 		opts = {
-			-- See `:help gitsigns.txt`
 			signs = {
 				add = { text = '+' },
 				change = { text = '~' },
@@ -49,7 +48,33 @@ return {
 			},
 		},
 	},
-	{
-		'tpope/vim-fugitive'
+	{ -- Git Integration
+		'tpope/vim-fugitive',
+		config = function()
+			require('custom.configs.fugitive')
+		end,
+	},
+	{ -- LSP Setup
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'v2.x',
+		dependencies = {
+			-- LSP Support
+			{'neovim/nvim-lspconfig'},             -- Required
+			{                                      -- Optional
+			'williamboman/mason.nvim',
+			build = function()
+				pcall(vim.cmd, 'MasonUpdate')
+			end,
+		},
+		{'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+		-- Autocompletion
+		{'hrsh7th/nvim-cmp'},     -- Required
+		{'hrsh7th/cmp-nvim-lsp'}, -- Required
+		{'L3MON4D3/LuaSnip'},     -- Required
+		},
+		config = function()
+			require('custom.configs.lsp')
+		end,
 	},
 }
