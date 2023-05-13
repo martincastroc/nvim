@@ -1,5 +1,4 @@
 return {
-
 	{ -- Fuzzy Finder
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		-- or                              , branch = '0.1.1',
@@ -7,7 +6,6 @@ return {
 		config = function()
 			require('custom.configs.telescope')
 		end,
-
 	},
 	{ -- Set Theme
 		'rebelot/kanagawa.nvim',
@@ -78,4 +76,13 @@ return {
 			require('custom.configs.lsp')
 		end,
 	},
+  { -- Automatically complete differet parenthesis and quotes, integreted with nvim-cmp
+    "windwp/nvim-autopairs",
+    config = function ()
+      require('custom.configs.autopairs')
+    end,
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim"
+  },
 }
