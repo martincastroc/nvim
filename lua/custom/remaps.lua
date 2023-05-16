@@ -15,3 +15,6 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- Move selected lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Make Ctrl-c equivalent to ESC for lsp/diagnostics on exiting insert mode.
+vim.keymap.set("i", "<C-c>", "<Esc>")
