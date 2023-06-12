@@ -8,10 +8,11 @@ return {
 		end,
 	},
 	{ -- Set Theme
-		'rebelot/kanagawa.nvim',
+		'ellisonleao/gruvbox.nvim',
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme 'kanagawa'
+      vim.cmd [[ set background=dark ]]
+      vim.cmd.colorscheme 'gruvbox'
 		end,
 	},
 	{ -- Set Statusline
@@ -20,7 +21,7 @@ return {
 		opts = {
 		options = {
 			icons_enabled = true,
-			theme = 'kanagawa',
+			theme = 'auto',
 			component_separators = '|',
 			section_separators = '',
 		},
