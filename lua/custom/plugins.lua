@@ -8,24 +8,19 @@ return {
 		end,
 	},
 	{ -- Set Theme
-		'ellisonleao/gruvbox.nvim',
+		'rebelot/kanagawa.nvim',
 		priority = 1000,
 		config = function()
       vim.cmd [[ set background=dark ]]
-      vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'kanagawa'
 		end,
 	},
 	{ -- Set Statusline
 		'nvim-lualine/lualine.nvim',
     dependencies = {'kyazdani42/nvim-web-devicons'},
-		opts = {
-		options = {
-			icons_enabled = true,
-			theme = 'auto',
-			component_separators = '|',
-			section_separators = '',
-		},
-		},
+    config = function ()
+      require('custom.configs.lualine')
+    end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -36,6 +31,9 @@ return {
 			require('custom.configs.treesitter')
 		end,
 	},
+  {
+    'nvim-treesitter/nvim-treesitter-context'
+  },
 	{ -- Adds git releated signs to the gutter, as well as utilities for managing changes
 		'lewis6991/gitsigns.nvim',
 		opts = {
