@@ -8,19 +8,19 @@ return {
 		end,
 	},
 	{ -- Set Theme
-		'rebelot/kanagawa.nvim',
-		priority = 1000,
-		config = function()
-      vim.cmd [[ set background=dark ]]
-      vim.cmd.colorscheme 'kanagawa'
-		end,
+        'rebelot/kanagawa.nvim',
+        priority = 1000,
+        config = function()
+            vim.cmd [[ set background=dark ]]
+            vim.cmd.colorscheme 'kanagawa'
+        end,
 	},
 	{ -- Set Statusline
-		'nvim-lualine/lualine.nvim',
-    dependencies = {'kyazdani42/nvim-web-devicons'},
-    config = function ()
-      require('custom.configs.lualine')
-    end,
+        'nvim-lualine/lualine.nvim',
+        dependencies = {'kyazdani42/nvim-web-devicons'},
+        config = function ()
+            require('custom.configs.lualine')
+        end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -31,9 +31,9 @@ return {
 			require('custom.configs.treesitter')
 		end,
 	},
-  {
-    'nvim-treesitter/nvim-treesitter-context'
-  },
+    {
+        'nvim-treesitter/nvim-treesitter-context'
+    },
 	{ -- Adds git releated signs to the gutter, as well as utilities for managing changes
 		'lewis6991/gitsigns.nvim',
 		opts = {
@@ -75,13 +75,10 @@ return {
 			require('custom.configs.lsp')
 		end,
 	},
-  { -- Automatically complete differet parenthesis and quotes, integreted with nvim-cmp
-    "windwp/nvim-autopairs",
-    config = function ()
-      require('custom.configs.autopairs')
-    end,
-  },
-  {
-    "lukas-reineke/indent-blankline.nvim"
-  },
+    { -- Automatically complete differet parenthesis and quotes, integreted with nvim-cmp
+        "windwp/nvim-autopairs",
+        config = function ()
+            require('custom.configs.autopairs')
+        end,
+    },
 }
