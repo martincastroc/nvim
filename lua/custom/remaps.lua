@@ -2,6 +2,8 @@ vim.g.mapleader = ' ' -- Space as leader key
 
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex) -- Open Netrw
 
+vim.keymap.set('n', '<Tab>', vim.cmd.bNext)
+
 -- Keep cursor in the middle of the screen when jumping half-pages
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
