@@ -8,11 +8,12 @@ return {
 		end,
 	},
 	{ -- Set Theme
-        'rebelot/kanagawa.nvim',
+        'sainnhe/gruvbox-material',
+        lazy = false,
         priority = 1000,
         config = function()
             vim.cmd [[ set background=dark ]]
-            vim.cmd.colorscheme 'kanagawa'
+            vim.cmd.colorscheme 'gruvbox-material'
         end,
 	},
 	{ -- Set Statusline
