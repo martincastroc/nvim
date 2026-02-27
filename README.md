@@ -5,4 +5,4 @@ My NeoVim Config. Resources used for guidance and inspiration:
 1. [Dreams of Code video](https://www.youtube.com/watch?v=Mtgo-nP_r8Y&t=584s)
 
 ## TODO:
-1. Nothing, config is good for now
+1. Nothing, good for now.
