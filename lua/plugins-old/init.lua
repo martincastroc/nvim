@@ -1,4 +1,4 @@
-return{
+return {
     {'kyazdani42/nvim-web-devicons'},
     {
         "numToStr/Comment.nvim",
@@ -12,4 +12,3 @@ return{
     },
     {'github/copilot.vim'},
 }
-
